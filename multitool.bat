@@ -1,3 +1,3 @@
 @echo off
 cls
-py tools.py
+py multitools.py
