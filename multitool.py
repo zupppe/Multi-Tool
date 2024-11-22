@@ -5,6 +5,7 @@ from colorama import Fore, Back, Style
 
 # CMD FONKSIYON
 os.system("cls||clear")
+os.system("title Multi Tool by @zupppe")
 
 # KLASÖRLER / FONKSİYONLAR
 termux31 = lambda: os.system("cls||clear")
