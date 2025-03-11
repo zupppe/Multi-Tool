@@ -1,10 +1,11 @@
 @echo off
 cls
-title KURULUM
+title MULTI TOOL GEREKSINIMLERI KURULUYOR..
+pip install wget
 cls
 pip install colorama
 cls
-pip install wget
+color 4
 cls
-py modules.py
-exit
+python modules.py
+cls
